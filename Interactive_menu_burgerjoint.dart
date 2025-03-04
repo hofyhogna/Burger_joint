@@ -13,6 +13,9 @@ void main() {
     MenuItem("Mushroom furger Classic", 5.99, ["Lettuce", "Tomato", "Onion", "Pickles"]),
     MenuItem("Mario-Mushroom cheesefurger", 6.99, ["Cheese", "Lettuce", "Tomato", "Onion"]),
     MenuItem("Louigi-Mushroom furger with facon ", 7.99, ["Facon", "Cheese", "Lettuce", "Tomato"]),
+    MenuItem("Prinsesse Peaches fries", 2.99, ["Special -Bowser sause", "Toad Mayo"]),
+    MenuItem("Sweet-tea", 1.99,["With Ice"]),
+    MenuItem("CocaCola", 1.99,["With Ice"]),
   ];
 
   List<MenuItem> order = [];
@@ -23,7 +26,7 @@ void main() {
     for (var i = 0; i < menu.length; i++) {
       print("${i + 1}. ${menu[i].name} - \$${menu[i].price}");
     }
-    print("Enter the number of the burger to add to order, or '0' to finish:");
+    print("Enter the number of the burger, side or drink to add to order, or '0' to finish:");
     int choice = int.parse(stdin.readLineSync()!);
 
     if (choice == 0) break;
